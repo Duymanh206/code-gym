@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phim Hoạt Hình - Web Xem Phim Trực Tuyến</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header cố định (Fixed Header) -->
+    <header class="navbar">
+      <div class="header-container">
+        <!-- Logo bên trái -->
+        <div class="logo">
+          <a href="#">Phim<span>HoatHinh</span></a>
+        </div>
+
+        <!-- Head-link (Các liên kết trang) -->
+        <nav class="head-link">
+          <a href="#" class="active">Phim hoạt hình</a>
+          <a href="#">Phim hoạt hình yêu thích</a>
+          <a href="#">Nhân vật hoạt hình</a>
+          <a href="#">Góp ý</a>
+        </nav>
+
+        <!-- Công cụ Tìm kiếm & Sắp xếp -->
+        <div class="header-tools">
+          <input
+            type="text"
+            placeholder="Tìm kiếm phim..."
+            class="search-input"
+          />
+          <select class="sort-select">
+            <option value="newest">Mới cập nhật</option>
+            <option value="views">Xem nhiều nhất</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Layout chính -->
+    <div class="main-container">
+      <!-- Left Content: Menu danh sách video có sẵn dạng Thumbnail -->
+      <aside class="left-content">
+        <h3>Danh sách Video</h3>
+        <div class="video-item active-item">
+          <img src="https://picsum.photos/id/1018/120/70" alt="Video 1" />
+          <div class="video-info">
+            <a href="#">Welcom đến với khách sạn Nobi</a>
+            <span class="views">5,147,528 lượt xem</span>
+            <span class="author">Channel Fun</span>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <img src="https://picsum.photos/id/1025/120/70" alt="Video 2" />
+          <div class="video-info">
+            <a href="#">Suneo khổng lồ</a>
+            <span class="views">5,147,528 lượt xem</span>
+            <span class="author">Doreamon Vietsub</span>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <img src="https://picsum.photos/id/1035/120/70" alt="Video 3" />
+          <div class="video-info">
+            <a href="#">Còi điều khiển vật</a>
+            <span class="views">5,147,528 lượt xem</span>
+            <span class="author">Doreamon Vietsub</span>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <img src="https://picsum.photos/id/1050/120/70" alt="Video 4" />
+          <div class="video-info">
+            <a href="#">Chiếc máy tạo kẹo bông</a>
+            <span class="views">5,147,528 lượt xem</span>
+            <span class="author">Doreamon Vietsub</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Content: Nội dung video chính được chọn & Mô tả -->
+      <main class="right-content">
+        <!-- 1. Phát Video chính dùng <iframe> (Ví dụ YouTube embed) -->
+        <div class="player-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Doraemon Ep 430 - Tớ là Mari đây & Gậy di chuyển"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <div class="video-title-details">
+          <h2>Tớ là Mari - <span>5,147,528 lượt xem</span></h2>
+          <p class="author-name">Tác giả: Fujiko F. Fujio</p>
+          <span class="badge-hd">Audio Việt - Chất lượng FullHD 1080p</span>
+        </div>
+
+        <!-- Mô tả chi tiết phim -->
+        <div class="movie-description">
+          <p>
+            Bộ phim kể về câu chuyện Thạch Sanh chém Trăn Tinh cứu dân, bắn Đại
+            Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa đẹp tan quân xâm lược.
+            Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
+            Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
+            các bạn cùng đón xem và cảm nhận.
+          </p>
+          <p>
+            Bộ phim kể về câu chuyện Thạch Sanh chém Trăn Tinh cứu dân, bắn Đại
+            Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa đẹp tan quân xâm lược.
+            Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
+            Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
+            các bạn cùng đón xem và cảm nhận.
+          </p>
+        </div>
+
+        <!-- 2. Nhúng Video bằng thẻ HTML5 <video> theo đúng tiêu chí bài tập -->
+        <div class="local-video-section">
+          <h3>Xem Trailer bằng thẻ &lt;video&gt; HTML5 (Audio Việt HD)</h3>
+          <video
+            controls
+            width="100%"
+            poster="https://picsum.photos/id/1018/800/400"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+          </video>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2017 - 2026 - Thiết kế web bởi trang hoathinhvn.net</p>
+    </footer>
+  </body>
+</html>
